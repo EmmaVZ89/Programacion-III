@@ -1,12 +1,19 @@
 {
 	"folders": [
 		{
+			"name": "Laboratorio III",
+			"path": "Laboratorio III"
+		},
+		{
+			"name": "Clase 1",
 			"path": "Clase 1"
 		},
 		{
+			"name": "Clase 2",
 			"path": "Clase 2"
 		},
 		{
+			"name": "Clase 3",
 			"path": "Clase 3"
 		}
 	]

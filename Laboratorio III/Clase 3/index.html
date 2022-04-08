@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Alumnos</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <script src="./js/funciones.js"></script>
+</head>
+<body>
+    <div>
+        <table class="table table-light">
+            <thead>
+                <tr>
+                    <th><h3>ALTA - ALUMNOS - AJAX</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input id="txtLegajo" class="form-control" type="number" name="legajo" placeholder="N° Legajo"></td>
+                </tr>
+                <tr>
+                    <td><input id="txtNombre" class="form-control" type="text" name="nombre" placeholder="Nombre"></td>
+                </tr>
+                <tr>
+                    <td><input id="txtApellido" class="form-control" type="text" name="apellido" placeholder="Apellido"></td>
+                </tr>
+                <tr>
+                    <td><input class="form-control" type="button" onclick="AJAX.CrearAlumno()" value="Crear Alumno"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table table-light">
+            <thead>
+                <tr>
+                    <th><h3>LISTAR - ALUMNOS - AJAX</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="form-control" type="button" onclick="AJAX.MostrarListado()" value="Listar"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Listado de Alumnos</legend>
+                            <div id="div_listado"></div>
+                        </fieldset>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table table-light">
+            <thead>
+                <tr>
+                    <th><h3>VERIFICAR - ALUMNOS - AJAX</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input id="txtLegajoVer" class="form-control" type="number" name="legajo" placeholder="N° Legajo"></td>
+                </tr>
+                <tr>
+                    <td><input class="form-control" type="button" onclick="AJAX.VerificarAlumno()" value="Verificar"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table table-light">
+            <thead>
+                <tr>
+                    <th><h3>MODIFICACION - ALUMNOS - AJAX</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input id="txtLegajoMod" class="form-control" type="number" name="legajo" placeholder="N° Legajo"></td>
+                </tr>
+                <tr>
+                    <td><input id="txtNombreMod" class="form-control" type="text" name="nombre" placeholder="Nombre"></td>
+                </tr>
+                <tr>
+                    <td><input id="txtApellidoMod" class="form-control" type="text" name="apellido" placeholder="Apellido"></td>
+                </tr>
+                <tr>
+                    <td><input class="form-control" type="button" onclick="AJAX.ModificarAlumno()" value="Modificar"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table table-light">
+            <thead>
+                <tr>
+                    <th><h3>VERIFICAR - ALUMNOS - AJAX</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input id="txtLegajoDel" class="form-control" type="number" name="legajo" placeholder="N° Legajo"></td>
+                </tr>
+                <tr>
+                    <td><input class="form-control" type="button" onclick="AJAX.BorrarAlumno()" value="Borrar"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
