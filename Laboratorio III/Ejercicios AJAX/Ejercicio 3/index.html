@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/entidad.js"></script>
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <div>
+        <table class="table table-light">
+            <tbody>
+                <tr>
+                    <td><input id="txtPath" type="text" placeholder="Path"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="Entidades.Ver()" value="Ver Archivo"></td>
+                </tr>
+                <tr><td></td></tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Contenido del archivo</legend>
+                            <div id="contenido"></div>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input id="txtPalabra" type="text" placeholder="Ingrese una palabra"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="Entidades.VerificarPalabra()" value="Verificar Palabra"></td>
+                </tr>
+                <tr><td></td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/calculadora.js"></script>
+    <title>Ejercicio 4</title>
+  </head>
+  <body>
+    <div>
+      <table class="table table-light">
+        <tbody>
+          <tr>
+            <td>
+              <h3>Calculadora</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input id="txtOp1" type="text" placeholder="1er operando" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select id="txtOperacion">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input id="txtOp2" type="text" placeholder="2do operando" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <div>Resultado: <span id="resultado"></span></div>
+            </td>
+          </tr>
+          <tr>
+              <td><input type="button" onclick="Calculadora.Calcular()" value="Calcular"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
