@@ -1,0 +1,89 @@
+PATRIMONIO, tiene dos versiones, uno es lo que le da el codigo civil (2015), y otro que le da la contabilidad.
+
+El codigo civil y comercial define al patrimonio todos los bienes materiales y no materiales que tiene un individuo. Frente a lo acreedores son un garantia.
+
+Para la contabilidad tiene una diferencia sustancial, incluye tambien las deudas y obligaciones que tiene una persona.
+
+Acreedor, el que recibe algo. Tiene derechos sobre los bienes del deudor. Una vez no liquidada la deuda tiene que reclamar con un abogado/juez. Si el deudor no paga embarga el patrimonio del deudor.
+
+Deudor, el que entrega algo.
+
+
+Operaciones:
+1. Se constituye FRA, entre los socio F, R y A. Y se comprometen a aportar:
+F: $200000
+R: $200000
+A: $100000
+
+Bienes y derechos			Obligaciones
+Derecho s/socios 500000			Deuda c/socios  500000
+
+Totales		 500000					500000
+
+
+2. El socio $ aporta $150000 con efectivo
+
+Bienes y derechos 			Obligaciones
+Derecho s/socios 350000			Deuda c/socios  500000
+Dinero efectivo  150000
+Totales		 500000					500000
+
+3. Se compran 200 articulos para comerciar a $500 cada uno. Se paga $40000 con efectivo y el saldo queda a credito.
+
+Bienes y derechos 			Obligaciones
+Derecho s/socios 350000			Deuda c/socios  500000
+Dinero efectivo  110000			Deuda c/prov.	 60000
+Mercaderia	 100000
+Totales		 560000					560000
+
+4. Se venden la mitad de las maercaderias a $800 cada una. Se cobra con un cheque por $20000 y el saldo queda a credito.
+
+Bienes y derechos 			Obligaciones
+Derecho s/socios 350000			Deuda c/socios  500000
+Dinero efectivo  110000			Deuda c/prov.	 60000
+Mercaderia	  50000			Ganancias	 30000
+Cheques rec.	  20000
+Derecho s/cliente 60000
+Totales		 590000					590000
+
+5. Se paga parcialmente al proveedor, con el cheque recibido.
+
+Bienes y derechos 			Obligaciones
+Derecho s/socios 350000			Deuda c/socios  500000
+Dinero efectivo  110000			Deuda c/prov.	 40000
+Mercaderia	  50000			Ganancias	 30000
+Cheques rec.	      0
+Derecho s/cliente 60000
+Totales		 570000					570000
+
+6. Un accidente destruye mercaderias por $10000
+
+Bienes y derechos 			Obligaciones
+Derecho s/socios 350000			Deuda c/socios  500000
+Dinero efectivo  110000			Deuda c/prov.	 40000
+Mercaderia	  40000			Ganancias	 30000
+Cheques rec.	      0			Perdidas	-10000(en neg)
+Derecho s/cliente 60000
+Totales		 560000					560000
+
+
+	ECUACION BASICA DE LA CONTABILIDAD
+
+ACTIVO = Bienes y derechos.
+
+PASIVO TOTAL = Obligaciones (conjunto de deudas).
+CAPITAL = Deuda c/socios.
+PASIVO = Deuda c/ proveedores.
+
+En todo momento el ACTIVO y el PASIVO TOTAL tienen que ser iguales.
+
+ACTIVO = PASIVO + CAPITAL + GANANCIAS-PERDIDAS.
+ACTIVO + PERDIDAS = PASIVO + CAPITAL + GANANCIAS.
+
+CAPITAL + GANANCIAS-PERDIDAS = PATRIMONIO
+ACTIVO = PASIVO + PATRIMONIO NETO.
+ACTIVO - PASIVO = PATRIMONIO NETO.
+
+
+
+

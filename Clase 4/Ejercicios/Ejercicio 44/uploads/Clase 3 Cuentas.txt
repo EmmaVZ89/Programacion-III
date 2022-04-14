@@ -1,0 +1,87 @@
+
+La contabilidad: es un sistema de registracion que recolecta informacion, la ordena y clasifica y realiza informes. A traves de estos informes se pueden obtener los estados financieros de una empresa. Gerenciar tambien, decisiones.
+
+Proceso contable:
+Operacion economica: compra, pago de un sueldo, deuda con un proveedor. Las cuales deben ser  registradas en el libro diario de forma cronologica
+Libro diario: donde sea anotan todas las operaciones cronologicamente.
+Libro mayor: contiene una por una la informacion de cada una de las cuenta. Sirve para realizar informes previamente haciendo un inventario.
+Inventario: es un relevamiento de todos los bienes y todos los derechos de la empresa.
+Informes: analisis para saber en que situacion se encuentra la empresa.
+
+	CUENTAS
+Las cuentas son instrumentos que utiliza la contabilidad para representar cada elemento que posee la empresa.
+Cada empresa se dedica a diferentes actividades, cada empresa tiene su propio plan de cuentas
+Plan de cuentas: el conjunto de cuentas que le van a permitir representar cada operacion que realice.
+Esquema: simplificada.
+Clasificacion: hay diferentes tipos
+
+Esquema tipo T: parte izquierda DEBE, parte derecha HABER. se registran las operaciones con su nombre de cuenta. Cada vez que se anote en el debe, se dice que la cuenta de debita/carga/adeuda. En cambio si se hace en el haber, se dice se acredita/descarga/abona.
+
+Debito: suma de todo los debitado
+Credito: suma de todo lo acreditado
+Saldo: diferencia entre debito y credito.
+Tipo de saldos: 
+	Deudor
+	Acreedor
+	Nulo
+
+
+CLASIFICACION
+
+Por su naturaleza:
+	Patrimoniales:
+	Resultados:
+	Orden:
+	Movimiento:
+	Regularizadoras:
+
+Por su saldo:
+	Acreedoras:
+	Deudoras:
+
+
+	POR SU NATURALEZA
+
+- Patrimoniales: representan elementos del patrimonio de la empresa, bienes, derechos u obligaciones contraidas.
+Activo: Caja; Mercaderias; Ds. por Ventas; Franquicias
+Pasivo: Proveedores; Sueldos a Pagar; IVA a Pagar; Prendas a pagar.
+Patrimonio neto: Obligaciones con los socios de la empresa. Ej: Capital Social; Reservas Legales; Resultados Acum.
+
+- Resultados: representan variaciones en el patrimonio, aumentos o disminuciones.
+Positivos/Ganancias/Ingresos: Ventas; Intereses Obtenidos; Df. Posit. de cotizacion.
+Negativos/Gastos/Perdidas: Sueldos; Intereses cedidos; Alquileres cedidos.
+
+- Orden: valores que tuvo y ya no tiene. Pero le interesa controlar.
+Documentos Descontados; Mercaderias Recibidas en Consig.
+
+- Movimiento: representan operaciones transitorias.
+Productos en Elaboracion; Mercaderias en Transito; Compras;
+
+- Regularizadoras: tienen la mision de actualizar valores tanto de activos como de pasivos.
+De activos: Amort. Acum. de Rodados; Prev. p/Ds. Incobrables
+De pasivos: Intereses Negativos a Devengar.
+
+
+	POR SU SALDO
+
+-Deudoras: siempre van a registrar mas del lado del debe que del de haber. Se incluyen todas las cuentas de:
+	Activo
+	Resultado Negativo
+	Regularizadoras de Pasivos
+
+-Acreedoras: siempre van a registrar mas del lado del haber que del debe. Se incluyen todas las cuentas de:
+	Pasivo
+	Patrimonio Neto
+	Resultado Positivo
+	Regularizadoras de Activos
+
+
+
+
+
+
+
+
+
+
+
