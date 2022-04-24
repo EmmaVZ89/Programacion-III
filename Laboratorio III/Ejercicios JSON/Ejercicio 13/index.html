@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./manejadora.js"></script>
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    <table class="table table-light">
+        <tbody>
+            <tr>
+                <td>
+                    <label for="">PAISES: </label>
+                    <select name="paises" id="cmbPaises" onchange="Entidades.CargarComboBox()">
+                        <option value="AR">ARGENTINA</option>
+                        <option value="FR">FRANCIA</option>
+                        <option value="GR">GRECIA</option>
+                        <option value="US">USA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">CIUDADES: </label>
+                    <select name="ciudades" id="cmbCiudades">
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

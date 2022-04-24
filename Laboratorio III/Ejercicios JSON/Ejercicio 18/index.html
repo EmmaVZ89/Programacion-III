@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./manejadora.js"></script>
+    <title>Ejercicio 18</title>
+  </head>
+  <body>
+    <table class="table table-light">
+      <tbody>
+        <tr>
+          <td><input type="number" id="txtId" placeholder="Id" /></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="txtSlogan" placeholder="Slogan" /></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="txtSize" placeholder="Tamaño" /></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="txtPrice" placeholder="Precio" /></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="txtColor" placeholder="Color" /></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="txtName" placeholder="Nombre Fabricante" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="text"
+              id="txtLogo"
+              placeholder="Logo Fabricante"
+              value="https://robohash.org/authicperferendis.bmp?size=50x50&set=set1"
+              disabled
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="txtPais" placeholder="Pais Fabricante" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="txtCiudad" placeholder="Ciudad Fabricante" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="button"
+              value="Agregar Remera"
+              onclick="Entidades.AgregarRemera2()"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><hr /></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="text"
+              id="txtCaracteristica"
+              placeholder="Ingrese un campo de filtrado"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select name="campo" id="txtCampo">
+              <option value="tamanio">Tamaño</option>
+              <option value="color">Color</option>
+              <option value="pais">Pais</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="button"
+              value="Filtrar Remeras"
+              onclick="Entidades.FiltrarRemerasPorCampo3()"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="button"
+              value="Traer Remeras"
+              onclick="Entidades.CargarRemeras5()"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="contenedorTabla"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
