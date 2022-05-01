@@ -6,8 +6,6 @@ use Zelarayan\AccesoDatos;
 
 $usuarios = Usuario::TraerTodos();
 
-// var_dump($usuarios);
-
 $tabla = 
 "<table>" . 
 "<thead>";

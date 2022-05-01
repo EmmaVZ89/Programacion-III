@@ -77,7 +77,6 @@ class Usuario implements IBM
                 $usuarioJson = json_decode($array_contenido[$i], true);
                 $usuario = new Usuario(0, $usuarioJson["nombre"], $usuarioJson["correo"], $usuarioJson["clave"]);
                 array_push($array_usuarios, $usuario);
-                // array_push($array_usuarios, json_decode($array_contenido[$i], true));
             }
         }
 
@@ -109,22 +108,20 @@ class Usuario implements IBM
             "SELECT * FROM usuarios u INNER JOIN perfiles p ON u.id_perfil = p.id"
         );
         $consulta->execute();
-        // $consulta->setFetchMode(PDO::FETCH_INTO, new Usuario);
 
         $array_usuarios = array();
         while ($fila = $consulta->fetch(PDO::FETCH_ASSOC)) {
-            $usuario = new stdClass();
-            $usuario->id = $fila["id"];
-            $usuario->nombre = $fila["nombre"];
-            $usuario->correo = $fila["correo"];
-            $usuario->clave = $fila["clave"];
-            $usuario->id_perfil = $fila["id_perfil"];
-            $usuario->perfil = $fila["descripcion"];
+            $id = $fila["id"];
+            $nombre = $fila["nombre"];
+            $correo = $fila["correo"];
+            $clave = $fila["clave"];
+            $id_perfil = $fila["id_perfil"];
+            $perfil = $fila["descripcion"];
+            $usuario = new Usuario($id, $nombre, $correo, $clave, $id_perfil, $perfil);
             array_push($array_usuarios, $usuario);
         }
 
         return $array_usuarios;
-        // return $consulta;
     }
 
     public static function TraerUno($params)
@@ -175,17 +172,10 @@ class Usuario implements IBM
         $consulta->bindValue(":id_perfil", $this->id_perfil, PDO::PARAM_INT);
         $consulta->execute();
 
-        $total_modificado = $consulta->rowCount();
+        $total_modificado = $consulta->rowCount(); // verifico las filas afectadas por la consulta
         if($total_modificado == 1) {
             $retorno = true;
         }
-
-        // $consultaOK = $consulta->execute();
-        // $param = array("correo"=>$this->correo, "clave"=>$this->clave);
-        // $usuario = Usuario::TraerUno(json_encode($param));
-        // if ($consultaOK && $usuario) {
-        //     $retorno = true;
-        // }
 
         return $retorno;
     }
@@ -198,20 +188,10 @@ class Usuario implements IBM
 		$consulta->bindValue(":id", $id, PDO::PARAM_INT);
         $consulta->execute();
         
-        $total_borrado = $consulta->rowCount();
+        $total_borrado = $consulta->rowCount(); // verifico las filas afectadas por la consulta
         if($total_borrado == 1) {
             $retorno = true;
         }
-
-        // $param = array("correo"=>$this->correo, "clave"=>$this->clave);
-        // $usuario = Usuario::TraerUno(json_encode($param));
-		// if(Alumno::validarAlumno($legajo)){
-		// 	$pathImg = Alumno::obtenerAlumno($legajo)->foto;
-		// 	if($consulta->execute()) {
-		// 		$retorno = true;
-		// 		unlink($pathImg);
-		// 	}
-		// }
 
 		return $retorno;
     }

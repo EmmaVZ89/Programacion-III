@@ -1,0 +1,3 @@
+tubo - 6500 - taiwan - ./televisoresBorrados/tubo.borrado.33341.jpg,
+qhd - 65000 - eeuu - ./televisoresBorrados/qhd.borrado.33527,
+led - 33500 - china - ./televisoresBorrados/led.borrado.35155jpg,
