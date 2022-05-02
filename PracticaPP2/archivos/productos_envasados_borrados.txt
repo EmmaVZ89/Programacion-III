@@ -1,0 +1,2 @@
+{"nombre":"yerba","origen":"paraguay","id":5,"codigoBarra":"123567","precio":400,"pathFoto":".\/productosBorrados\/5.yerba.borrado.212816.jpg"},
+{"nombre":"yerba","origen":"argentina","id":6,"codigoBarra":"123asd","precio":350,"pathFoto":".\/productosBorrados\/6.yerba.borrado.213334.jpg"},

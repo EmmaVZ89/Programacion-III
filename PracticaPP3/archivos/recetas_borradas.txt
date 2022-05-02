@@ -1,0 +1,3 @@
+{"id":4,"nombre":"arroz","ingredientes":"tomates, condimentos y sal","tipo":"casero","pathFoto":""},
+{"id":6,"nombre":"milanesa","ingredientes":"carne y pan rayado","tipo":"gourmet","pathFoto":".\/recetasBorradas\/6.milanesa.borrado.23611.jpg"},
+{"id":7,"nombre":"arroz","ingredientes":"agua y sal","tipo":"gourmet","pathFoto":".\/recetasBorradas\/7.arroz.borrado.23707.jpg"},
