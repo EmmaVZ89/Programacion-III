@@ -1,0 +1,3 @@
+{"nombre":"melon","origen":"misiones","id":6,"codigoBarra":567,"precio":333,"pathFoto":".\/productosBorrados\/6.melon.borrado.153808.jpg"},
+{"nombre":"yerba","origen":"formosa","id":8,"codigoBarra":987,"precio":150,"pathFoto":".\/productosBorrados\/8.yerba.borrado.153854.jpg"},
+{"nombre":"auto","origen":"brazil","id":5,"codigoBarra":999,"precio":3333,"pathFoto":""},

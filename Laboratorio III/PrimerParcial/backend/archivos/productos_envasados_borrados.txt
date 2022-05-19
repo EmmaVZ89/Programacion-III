@@ -1,0 +1,7 @@
+{"nombre":"melon","origen":"misiones","id":6,"codigoBarra":567,"precio":333,"pathFoto":".\/productosBorrados\/6.melon.borrado.153808.jpg"},
+{"nombre":"yerba","origen":"formosa","id":8,"codigoBarra":987,"precio":150,"pathFoto":".\/productosBorrados\/8.yerba.borrado.153854.jpg"},
+{"nombre":"auto","origen":"brazil","id":5,"codigoBarra":999,"precio":3333,"pathFoto":""},
+{"nombre":"1111","origen":"Argentina","id":21,"codigoBarra":1111,"precio":213,"pathFoto":".\/productosBorrados\/21.1111.borrado.150303.jpg"},
+{"nombre":"camioneta","origen":"Argentina","id":19,"codigoBarra":121212,"precio":8000,"pathFoto":""},
+{"nombre":"yerba","origen":"Colombia","id":11,"codigoBarra":1111,"precio":550,"pathFoto":".\/productosBorrados\/11.yerba.borrado.151030.jpg"},
+{"nombre":"tornillo","origen":"Argentina","id":24,"codigoBarra":23432,"precio":123,"pathFoto":".\/productosBorrados\/24.tornillo.borrado.153548.jpg"},
