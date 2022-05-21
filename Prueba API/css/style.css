@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-cartas {
+    background-color: rgb(47, 255, 68);
+}
+
+.c-carta {
+    width: 100px;
+}
+
+.carta {
+    object-fit: contain;
+    border-radius: 10px;
+}
