@@ -113,7 +113,7 @@ class Verificadora
 
         $inicio = new DateTime();
         $inicio_mil = round(microtime(true) * 1000);
-        // sleep(2); // lantencia harcodeada
+        // sleep(2); // latencia harcodeada
 
 
         $response = $handler->handle($request);

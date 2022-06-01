@@ -16,64 +16,56 @@
         <input type="text" name="algo">
         <input type="submit" value="GET">
     </form>
-</body>
-<div class="container text-center contenedor-cartas">
-    <div class="row row-cols-5 mt-4 mb-4">
-        <?php
-        if (isset($_GET["algo"])) {
-            $URL = "https://rickandmortyapi.com/api/character";
-            $json = file_get_contents($URL);
-            $datos = json_decode($json);
-            $array_personajes = $datos->results;
+    <br><br><br>
+    <?php
+    if (isset($_GET["algo"])) {
+        $URL = "https://rickandmortyapi.com/api/character";
+        $json = file_get_contents($URL);
+        $datos = json_decode($json);
+        $array_personajes = $datos->results;
+        shuffle($array_personajes);
+        $array_10Personajes = array_slice($array_personajes, 0, 10);
+        $array_10Personajes = array_merge($array_10Personajes, $array_10Personajes);
+        
 
-            for ($i = 0; $i < count($array_personajes); $i++) {
-                $img_personaje = "<img class='carta' src='{$array_personajes[$i]->image}' width='100px' alt='img'>";
+        $array_cartas = array();
+        for ($i = 0; $i < count($array_10Personajes); $i++) {
+            $id_personaje = $array_10Personajes[$i]->id;
+            $img_personaje = "<img src='{$array_10Personajes[$i]->image}' alt='img'>";
+            $nombre_personaje = $array_10Personajes[$i]->name;
 
-                echo "<div id='{$array_personajes[$i]->id}' class='col'>";
-                echo "<div class='card c-carta mt-2 mb-2'>";
-                echo $img_personaje;
-                echo "</div>";
-                echo "</div>";
+            $carta = "";
+            if($i >= 0 && $i <= 9 ) {
+                $carta .= "<div class='tarjeta' >";
+                $carta .= "<div class='face front' data-id='{$id_personaje}' name='cartaFrontA'>";
+                $carta .= "<img src='./front.jpg' alt='img'>";
+                $carta .= "</div>";
+                $carta .= "<div class='face back'name='cartaBackA" . $id_personaje . "'>";
+                $carta .= $img_personaje;
+                $carta .= "<h3>" . $nombre_personaje . "</h3>";
+                $carta .= "</div>";
+                $carta .= "</div>";    
+            } else {
+                $carta .= "<div class='tarjeta' >";
+                $carta .= "<div class='face front' data-id='{$id_personaje}' name='cartaFrontB'>";
+                $carta .= "<img src='./front.jpg' alt='img'>";
+                $carta .= "</div>";
+                $carta .= "<div class='face back'name='cartaBackB" . $id_personaje . "'>";
+                $carta .= $img_personaje;
+                $carta .= "<h3>" . $nombre_personaje . "</h3>";
+                $carta .= "</div>";
+                $carta .= "</div>";    
             }
-            // echo dibujarTabla($array_personajes);
+            array_push($array_cartas, $carta);
         }
-        ?>
-    </div>
-</div>
+
+        shuffle($array_cartas);
+        for ($i=0; $i < count($array_cartas); $i++) { 
+            echo $array_cartas[$i];
+        }
+
+    }
+    ?>
+</body>
 
 </html>
-
-
-<?php
-
-function dibujarTabla(array $personajes): string
-{
-    $tabla = "";
-    $tabla .= "<table>";
-    $tabla .= "<thead>";
-    foreach ($personajes[0] as $key => $value) {
-        if ($key == "image" || $key == "name" || $key == "id") {
-            $tabla .= "<th>" . $key . "</th>";
-        }
-    }
-    $tabla .= "</thead";
-
-    $tabla .= "<tboby>";
-    for ($i = 0; $i < count($personajes); $i++) {
-        $tabla .= "<tr>";
-        foreach ($personajes[$i] as $key => $value) {
-            if ($key == "image") {
-                $tabla .= "<td><img src='" . $value . "' width='100px' alt='img'></td>";
-            } else if ($key == "name" || $key == "id") {
-                $tabla .= "<td>" . $value . "</td>";
-            }
-        }
-        $tabla .= "</tr>";
-    }
-    $tabla .= "</tbody";
-    $tabla .= "</table>";
-
-    return $tabla;
-}
-
-?>
