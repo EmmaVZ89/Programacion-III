@@ -75,7 +75,7 @@ class Verificadora
         return $usuario;
     }
 
-    // MIDDLEWARES *******************************************************************************
+    // Usuario MIDDLEWARES *******************************************************************************
     public function ValidarParametrosUsuario(Request $request, RequestHandler $handler): ResponseMW
     {
         $contenidoAPI = "";
@@ -110,26 +110,147 @@ class Verificadora
         return $response->withHeader('Content-Type', 'application/json');
     }
 
+    // Validador de JWT *******************************************************************************
     public function ChequearJWT(Request $request, RequestHandler $handler): ResponseMW
     {
         $contenidoAPI = "";
         $obj = new stdClass();
         $status = 500;
+        $obj->exito = false;
+        $obj->mensaje = "No se recibio el parametro 'token'";
+        $obj->datos = null;
 
-        $token = $request->getHeader("token")[0];
-        $obj_rta = Autentificadora::obtenerPayLoad($token);
+        if (isset($request->getHeader("token")[0])) {
+            $token = $request->getHeader("token")[0];
+            $obj_rta = Autentificadora::obtenerPayLoad($token);
 
-        if ($obj_rta->exito) {
-            $response = $handler->handle($request);
-            $obj->datos = (string) $response->getBody();
-            // $contenidoAPI = (string) $response->getBody();
-            $status = 200;
+            if ($obj_rta->exito) {
+                $response = $handler->handle($request);
+                $obj->datos = (string) $response->getBody();
+                // $contenidoAPI = (string) $response->getBody();
+                $status = 200;
+            }
+            $obj->exito = $obj_rta->exito;
+            $obj->mensaje = $obj_rta->mensaje;
+            // $obj->datos = $obj_rta->payload;
         }
-        $obj->exito = $obj_rta->exito;
-        $obj->mensaje = $obj_rta->mensaje;
-        $obj->datos = $obj_rta->payload;
-        
+
         $contenidoAPI = json_encode($obj);
+
+        $response = new ResponseMW();
+        $response = $response->withStatus($status);
+        $response->getBody()->write($contenidoAPI);
+        return $response->withHeader('Content-Type', 'application/json');
+    }
+
+    // CD MIDDLEWARES *******************************************************************************
+    public function ValidarParametrosCDAgregar(Request $request, RequestHandler $handler): ResponseMW
+    {
+        $contenidoAPI = "";
+        $arrayDeParametros = $request->getParsedBody();
+        $obj = new stdClass();
+        $status = 403;
+
+        if (
+            isset($arrayDeParametros["titulo"]) &&
+            isset($arrayDeParametros["cantante"])  &&
+            isset($arrayDeParametros["anio"])
+        ) {
+            $response = $handler->handle($request);
+            $contenidoAPI = (string) $response->getBody();
+            $status = 200;
+        } else {
+            $mensaje_error = "Parametros faltantes: \n";
+            if (!isset($arrayDeParametros["titulo"])) {
+                $mensaje_error .= "- titulo \n";
+            }
+            if (!isset($arrayDeParametros["cantante"])) {
+                $mensaje_error .= "- cantante \n";
+            }
+            if (!isset($arrayDeParametros["anio"])) {
+                $mensaje_error .= "- anio \n";
+            }
+            $obj->mensaje = $mensaje_error;
+            $contenidoAPI = json_encode($obj);
+        }
+
+        $response = new ResponseMW();
+        $response = $response->withStatus($status);
+        $response->getBody()->write($contenidoAPI);
+        return $response->withHeader('Content-Type', 'application/json');
+    }
+
+    public function ValidarParametrosCDModificar(Request $request, RequestHandler $handler): ResponseMW
+    {
+        parse_str(file_get_contents("php://input"), $put_vars);
+        $contenidoAPI = "";
+        $obj_rta = new stdClass();
+        $status = 500;
+
+        if (isset($put_vars['obj'])) {
+            $obj = json_decode($put_vars['obj']);
+            if (
+                isset($obj->id) &&
+                isset($obj->titulo)  &&
+                isset($obj->cantante)  &&
+                isset($obj->anio)
+            ) {
+                $response = $handler->handle($request);
+                $contenidoAPI = (string) $response->getBody();
+                $status = 200;
+            } else {
+                $mensaje_error = "Parametros faltantes: \n";
+                if (!isset($obj->id)) {
+                    $mensaje_error .= "- id \n";
+                }
+                if (!isset($obj->titulo)) {
+                    $mensaje_error .= "- titulo \n";
+                }
+                if (!isset($obj->cantante)) {
+                    $mensaje_error .= "- cantante \n";
+                }
+                if (!isset($obj->anio)) {
+                    $mensaje_error .= "- anio \n";
+                }
+                $obj_rta->mensaje = $mensaje_error;
+                $contenidoAPI = json_encode($obj_rta);
+            }
+        } else {
+            $obj_rta->mensaje = "Falta parametro 'obj'";
+            $contenidoAPI = json_encode($obj_rta);
+        }
+
+        $response = new ResponseMW();
+        $response = $response->withStatus($status);
+        $response->getBody()->write($contenidoAPI);
+        return $response->withHeader('Content-Type', 'application/json');
+    }
+
+    public function ValidarParametrosCDBorrar(Request $request, RequestHandler $handler): ResponseMW
+    {
+        parse_str(file_get_contents("php://input"), $put_vars);
+        $contenidoAPI = "";
+        $obj_rta = new stdClass();
+        $status = 500;
+
+        if (isset($put_vars['obj'])) {
+            $obj = json_decode($put_vars['obj']);
+            if (isset($obj->id)) {
+                $response = $handler->handle($request);
+                $contenidoAPI = (string) $response->getBody();
+                $status = 200;
+            } else {
+                $mensaje_error = "Parametros faltantes: \n";
+                if (!isset($obj->id)) {
+                    $mensaje_error .= "- id \n";
+                }
+                $obj_rta->mensaje = $mensaje_error;
+                $contenidoAPI = json_encode($obj_rta);
+            }
+        } else {
+            $obj_rta->mensaje = "Falta parametro 'obj'";
+            $contenidoAPI = json_encode($obj_rta);
+        }
 
         $response = new ResponseMW();
         $response = $response->withStatus($status);
