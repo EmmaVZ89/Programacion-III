@@ -38,7 +38,7 @@ class Cd implements ICRUDSLIM
 
 		return $newResponse->withHeader('Content-Type', 'application/json');
 	}
-
+	
 	public function agregarUno(Request $request, Response $response, array $args): Response
 	{
 		$obj_rta = new stdClass();
